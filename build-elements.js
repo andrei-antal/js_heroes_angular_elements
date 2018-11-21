@@ -17,4 +17,7 @@ const concat = require('concat');
   // React example
   await fs.remove('./test-react/my-app/public/custom-element.js')
   await fs.copyFile('elements/custom-element.js', './test-react/my-app/public/custom-element.js')
+  // Vue example
+  await fs.remove('./test-vue/my-project/public/custom-element.js')
+  await fs.copyFile('elements/custom-element.js', './test-vue/my-project/public/custom-element.js')
 })();

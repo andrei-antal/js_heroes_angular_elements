@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <base href="/">
+</head>
+
+<body>
+
+  <h3>My awesome rating is
+    <span id="rating">4</span>
+  </h3>
+
+  <my-rating rating="3"></my-rating>
+
+  <br>
+  <button id="ratingBtn">Give max rating</button>
+
+
+  <script type="text/javascript" src="custom-element.js"></script>
+  <script>
+    const ratingComponent = document.querySelector('my-rating');
+    const ratingText = document.querySelector('#rating');
+    const ratingButton = document.querySelector('#ratingBtn');
+    ratingComponent.addEventListener('ratingChange', (data) => {
+      ratingText.innerHTML = ratingComponent.rating + 1;
+    });
+    ratingButton.addEventListener('click', () => {
+      ratingComponent.rating = 4;
+    });
+  </script>
+</body>
+
+</html>

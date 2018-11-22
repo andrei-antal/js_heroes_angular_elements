@@ -20,7 +20,8 @@ import { createCustomElement } from '@angular/elements';
 })
 export class CustomElementModule {
   constructor(private injector: Injector) {
-    const el = createCustomElement(MyRatingComponent, {injector : this.injector});
+    const el = createCustomElement(MyRatingComponent,
+      {injector : this.injector});
     customElements.define('my-rating', el);
   }
   ngDoBootstrap() {
